@@ -1,0 +1,6 @@
+framework module Pods_Scheduled_Share_App {
+  umbrella header "Pods-Scheduled Share App-umbrella.h"
+
+  export *
+  module * { export * }
+}

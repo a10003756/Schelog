@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SearchCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="60" id="KGk-i7-Jjw" customClass="SearchUserTableViewCell" customModule="Scheduled_Share_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOy-MR-Rf2">
+                        <rect key="frame" x="70" y="10" width="180" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="180" id="yx6-By-W1E"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LGr-4V-4Bi">
+                        <rect key="frame" x="10" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="AuG-fx-Xqj"/>
+                            <constraint firstAttribute="height" constant="50" id="WEW-D6-bPE"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzz-8c-RpF">
+                        <rect key="frame" x="340" y="0.0" width="69" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="69" id="3Ep-KZ-sfM"/>
+                        </constraints>
+                        <state key="normal" title="フォロー"/>
+                        <connections>
+                            <action selector="followWithButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XGH-mC-tLu"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="LGr-4V-4Bi" secondAttribute="bottom" constant="5" id="2Yf-ZD-2oj"/>
+                    <constraint firstItem="MOy-MR-Rf2" firstAttribute="leading" secondItem="LGr-4V-4Bi" secondAttribute="trailing" constant="10" id="44u-k1-IqZ"/>
+                    <constraint firstAttribute="bottom" secondItem="MOy-MR-Rf2" secondAttribute="bottom" constant="10" id="Hcb-uj-liN"/>
+                    <constraint firstItem="LGr-4V-4Bi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="IsN-Cz-5cT"/>
+                    <constraint firstItem="gzz-8c-RpF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="WGD-4S-8bn"/>
+                    <constraint firstAttribute="bottom" secondItem="gzz-8c-RpF" secondAttribute="bottom" id="Znx-47-fMi"/>
+                    <constraint firstItem="LGr-4V-4Bi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="abI-EP-4E9"/>
+                    <constraint firstItem="MOy-MR-Rf2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="iyD-bS-zvU"/>
+                    <constraint firstAttribute="trailing" secondItem="gzz-8c-RpF" secondAttribute="trailing" constant="5" id="tJp-8r-fpE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="followButton" destination="gzz-8c-RpF" id="sgw-l1-aWS"/>
+                <outlet property="userImageView" destination="LGr-4V-4Bi" id="UqH-I5-q1b"/>
+                <outlet property="userNameLabel" destination="MOy-MR-Rf2" id="n9j-uJ-KvB"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="125.22321428571428"/>
+        </tableViewCell>
+    </objects>
+</document>
